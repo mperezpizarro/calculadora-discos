@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora discos</title>
+</head>
+<body>
+    <h1>Calculadora de discos</h1>
+    <form id="discForm" method="post">
+            <label for="fileSizeInput">Tamaño del archivo:</label>
+            <input type="number" name="fileSize" id="fileSizeInput" min="0" step=".1" />
+            <select name="fileSizeUnit" id="fileSizeUnitInput">
+                <option value="kb">KB</option>
+                <option value="mb">MB</option>
+                <option value="gb">GB</option>
+            </select>
+            <label for="discInput">Disco óptico:</label>
+            <select name="disc" id="discInput">
+                <option value="cdr700">CD-R (700MB)</option>
+                <option value="cdr900">CD-R (900MB)</option>
+                <option value="dvd5">DVD-5 (4,7GB)</option>
+                <option value="dvd9">DVD-9 (8,54GB)</option>
+                <option value="bd1">Blu-ray capa simple (25GB)</option>
+                <option value="bd2">Blu-ray doble capa (50GB)</option>
+            </select>
+            <button id="submitBtn" type="submit">Calcular</button>
+            <!-- Avoid layout shifting -->
+            <p id="result">&nbsp;</p>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
